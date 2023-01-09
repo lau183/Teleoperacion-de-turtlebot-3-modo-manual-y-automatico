@@ -14,11 +14,19 @@ conda create -n <nombre_entorno> python=3.8
 pip install -r requirements.txt
 ```
 
+## Preparación del entorno de Gazebo
+
+1. Descomprimir la carpeta "modelos_arucos.tar.gz" en la ruta /.gazebo/models
+2. Descomprimir la carpeta "launch_mundos.tar.gz" en /turtlebot3_simulations/turtlebot3_gazebo/launch
+3. Descomprimir la carpeta "mundos.tar.gz" en /turtlebot3_simulations/turtlebot3_gazebo/worlds
+
 # Guía de ejecución
+
 En todos los terminales se debe incluir el modelo de  usado en la variable TURTLEBOT3_MODEL, de la siguiente forma:
 ```sh
 export TURTLEBOT3_MODEL=waffle
 ```
+
 ## Modo manual
 
 Terminal 1: Simulación del turtlebot en gazebo con el entorno creado
