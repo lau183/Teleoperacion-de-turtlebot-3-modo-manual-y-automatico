@@ -43,7 +43,7 @@ Terminal 2: Script para enviar el movimiento al robot en función del comando re
 ```sh
 rosrun manos move_manual.py
 ```
-Después, se añade la plantilla ``RobotModel'' en \textit{rviz} para visualizar el movimiento del robot.
+Después, se añade la plantilla "RobotModel" en _rviz_ para visualizar el movimiento del robot.
 
 Terminal 3: Ejecutable para la simulacion y planificacion de movimiento del brazo _PhantomX Reactor Robot_.
 
