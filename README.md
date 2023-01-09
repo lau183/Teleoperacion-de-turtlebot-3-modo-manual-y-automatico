@@ -26,8 +26,8 @@ sudo apt install ros-noetic-arbotix
 ## Preparación de scripts
 
 Para poder usar el modo automático:
-- Cambiar del script hands.py en la función "auto" el file_path con la ruta donde se tenga el archivo explore_costmap.launch del paquete frontier_exploration.
--  Cambiar del script hands_with_teleop.py en la función "auto" y "teleop" el file_path con la ruta donde se tenga el archivo explore_costmap.launch del paquete frontier_exploration.
+- Cambiar del script hands.py y del  hands_with_teleop.py en la función "auto" el file_path con la ruta donde se tenga el archivo explore_costmap.launch del paquete frontier_exploration.
+-  Cambiar del script hands_with_teleop.py en la función "teleop" el file_path con la ruta donde se tenga el archivo turtlebot3_teleop.launch del paquete de turtlebot3
 
 # Guía de ejecución
 
