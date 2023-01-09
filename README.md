@@ -14,6 +14,7 @@ Repositorio de la práctica 3 de la asignatura de robots móviles del grado de I
 conda create -n <nombre_entorno> python=3.8
 conda activate <nombre_entorno>
 pip install -r requirements.txt
+sudo apt install ros-noetic-arbotix
 ```
 
 ## Preparación del entorno de Gazebo
