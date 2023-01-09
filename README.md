@@ -12,6 +12,7 @@ Repositorio de la práctica 3 de la asignatura de robots móviles del grado de I
 ## Instalación
 ```sh
 conda create -n <nombre_entorno> python=3.8
+conda activate <nombre_entorno>
 pip install -r requirements.txt
 ```
 
