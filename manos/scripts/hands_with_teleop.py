@@ -364,3 +364,6 @@ if __name__ == '__main__':
         modelo.auto()
     else:
         modelo.teleop()
+    
+    print("")
+    print("PROGRAM FINISHED")
