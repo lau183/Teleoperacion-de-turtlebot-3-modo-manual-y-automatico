@@ -23,6 +23,12 @@ sudo apt install ros-noetic-arbotix
 2. Descomprimir la carpeta "launch_mundos.tar.gz" en /turtlebot3_simulations/turtlebot3_gazebo/launch
 3. Descomprimir la carpeta "mundos.tar.gz" en /turtlebot3_simulations/turtlebot3_gazebo/worlds
 
+## Preparación de scripts
+
+Para poder usar el modo automático:
+- Cambiar del script hands.py en la función "auto" el file_path con la ruta donde se tenga el archivo explore_costmap.launch del paquete frontier_exploration.
+-  Cambiar del script hands_with_teleop.py en la función "auto" y "teleop" el file_path con la ruta donde se tenga el archivo explore_costmap.launch del paquete frontier_exploration.
+
 # Guía de ejecución
 
 En todos los terminales se debe incluir el modelo de  usado en la variable TURTLEBOT3_MODEL, de la siguiente forma:
