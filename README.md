@@ -1,3 +1,4 @@
+Projecto desarrollado por: [Zuleika María Redondo García] y [Laura García García]
 # Teleoperacion-de-turtlebot-3-modo-manual-y-automatico
 
 Repositorio de la práctica 3 de la asignatura de robots móviles del grado de Ingeniería robótica de la Universidad de Alicante
@@ -105,3 +106,5 @@ rosrun move hands.py
 [Paquete frontier exploration]: https://github.com/nocoinman/frontier_exploration.git
 [Paquete aruco detector osv]: https://github.com/CesMak/aruco_detector_ocv.git
 [Paquete Navigation stack]: https://github.com/ros-planning/navigation.git
+[Zuleika María Redondo García]: https://github.com/zuleikarg
+[Laura García García]: https://github.com/lau183
