@@ -43,7 +43,7 @@ Terminal 2: Script para enviar el movimiento al robot en función del comando re
 rosrun manos move_manual.py
 ```
 
-Terminal 3: Ejecutable para la simulaci ́on y planificaci ́on de movimiento del brazo _PhantomX Reactor Robot_.
+Terminal 3: Ejecutable para la simulacion y planificacion de movimiento del brazo _PhantomX Reactor Robot_.
 
 ```sh
 roslaunch phantomx_reactor_arm_moveit_config demo.launch
