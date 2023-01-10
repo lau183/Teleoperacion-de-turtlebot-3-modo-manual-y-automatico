@@ -97,6 +97,11 @@ Terminal 5: Script para la selección y ejecución del modo.
 ```sh
 rosrun move hands.py 
 ```
+En caso, de que se quiera usar el modo automático teleoperado, para que en la interfaz aparezeca dicha opción se debe usar el script hands_with_teleop.py en lugar del hands.py.
+
+```sh
+rosrun move hands_with_teleop.py 
+```
  Aparecerá la interfaz de usuario y se seleccionará el modo automático o el automático teleoperado.
 
 
