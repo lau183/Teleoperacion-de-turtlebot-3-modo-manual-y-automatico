@@ -5,9 +5,10 @@ Repositorio de la práctica 3 de la asignatura de robots móviles del grado de I
 
 ## Requisitos
 - ROS noetic
-- [Paquete turtlebot3]
+- [Paquete turtlebot3] para probar proyecto en simulación
 - [Paquete frontier exploration]
 - [Paquete Navigation stack]
+- [Paquete turtlebot 2] para probar proyecto en robot real
 
 ## Instalación
 ```sh
@@ -16,6 +17,7 @@ conda activate <nombre_entorno>
 pip install -r requirements.txt
 sudo apt install ros-noetic-arbotix
 ```
+# Guía de ejecución en simulación con turtlebot 3
 
 ## Preparación del entorno de Gazebo para simulación del turtlebot 3
 
@@ -29,7 +31,6 @@ Para poder usar el modo automático:
 - Cambiar del script hands.py y del  hands_with_teleop.py en la función "auto" el file_path con la ruta donde se tenga el archivo explore_costmap.launch del paquete frontier_exploration.
 -  Cambiar del script hands_with_teleop.py en la función "teleop" el file_path con la ruta donde se tenga el archivo turtlebot3_teleop.launch del paquete de turtlebot3
 
-# Guía de ejecución en simulación
 
 En todos los terminales se debe incluir el modelo de  usado en la variable TURTLEBOT3_MODEL, de la siguiente forma:
 ```sh
@@ -106,6 +107,13 @@ rosrun move hands_with_teleop.py
 
 
 # Guía de ejecución en  robot real turtlebot 2
+## Preparación de scripts
+
+Para poder usar el modo automático:
+- Cambiar del script hands.py y del  hands_with_teleop.py en la función "auto" el file_path con la ruta donde se tenga el archivo explore_costmap.launch del paquete frontier_exploration.
+-  Cambiar del script hands_with_teleop.py en la función "teleop" el file_path con la ruta donde se tenga el archivo turtlebot_teleop.launch del paquete de turtlebot
+
+
 Se debe conectar el ordenador a la red local del laboratorio e inicializar las siguientes variables de entorno en cada uno de los terminales que se usen o bien tenerlas inicializadas en el bashrc:
 ```sh
 export ROS_MASTER_URI=http://<ip_turtlebot>:11311
@@ -210,7 +218,7 @@ Terminal 2: Script para la selección y ejecución del modo.
 
 
 
-
+[Paquete turtlebot 2]: https://github.com/turtlebot/turtlebot.git
 [Paquete turtlebot3]: https://github.com/ROBOTIS-GIT/turtlebot3.git
 [Paquete frontier exploration]: https://github.com/nocoinman/frontier_exploration.git
 [Paquete aruco detector osv]: https://github.com/CesMak/aruco_detector_ocv.git
