@@ -114,7 +114,7 @@ export ROS_IP=<ip_ordenador>
 ```
 
 Para conectarse al robot real se hace a través de SSH:
-- Si  ssh tb2@<ip_turtlebot>se usa el Turtlebot 5, se emplea el siguiente comando:
+- Si  se usa el Turtlebot 5, se emplea el siguiente comando:
 ```sh
  ssh tb2@<ip_turtlebot>
 ```
@@ -140,14 +140,60 @@ roslaunch phantomx_reactor_arm_controller arbotix_phantomx_reactor_arm_wrist.lau
 
 Abrimos los siguientes terminales desde fuera del robot:
 
- Terminal 3: Script para enviar el movimiento al robot en función del comando recibido.
+ Terminal 1: Script para enviar el movimiento al robot en función del comando recibido.
  ```sh
 rosrun manos move_manual.py
 ```
 
-Terminal 4: Script para la selección y ejecución del modo.
+Terminal 2: Script para la selección y ejecución del modo.
  ```sh
  rosrun manos hands_with_teleop.py 
+```
+
+## Modo automático y automático teleoperado
+
+Abrimos los siguientes terminales desde dentro del robot (SSH):
+
+Terminal 1:  Arranque mínimo del robot.
+```sh
+roslaunch turtlebot_bringup minimal.launch
+```
+Terminal 2: Controlador para utilizar el láser del robot.
+```sh
+ roslaunch turtlebot_bringup hokuyo_ust10lx.launch
+```
+Terminal 3: Controlador para utilizar la cámara del robot.
+```sh
+ roslaunch astra_launch astra.launch
+```
+Terminal 4: Ejecutable para permitir la realización del mapeo con la creación de los topics necesarios, entre ellos, uno esencial para la tarea, move_base.
+```sh
+ export TURTLEBOT_3D_SENSOR=astra 
+ roslaunch turtlebot_navigation gmapping_demo.launch 
+```
+
+Abrimos los siguientes terminales desde fuera del robot:
+
+Terminal 1: Opertura del entorno de rviz para visualizar el mapeo, la posición del robot y, el láser y la cámara del robot, principalmente.
+```sh
+rosrun rviz rviz
+```
+
+ Una vez se haya abierto, se cambia el fixed frame a /odom y es necesario incluir la plantilla:
+ - LaserScan con topic /scan
+ - Axes con topic /base_link
+ - Map con topic /map
+ - RobotModel con topic /camera/rgb/image_rect_color
+
+Terminal 2: Script para la selección y ejecución del modo.
+```sh
+ rosrun manos hands.py
+```
+
+ En caso, de que se quiera usar el modo automático teleoperado, para que en la interfaz aparezeca dicha opción se debe usar el script hands_with_teleop.py  en lugar del hands.py. Para ello usar el siguiente comando:
+ 
+ ```sh
+ rosrun manos hands_with_teleop.py
 ```
 
 
