@@ -28,8 +28,8 @@ sudo apt install ros-noetic-arbotix
 ## Preparación de scripts
 
 Para poder usar el modo automático:
-- Cambiar del script hands.py y del  hands_with_teleop.py en la función "auto" el file_path con la ruta donde se tenga el archivo explore_costmap.launch del paquete frontier_exploration.
--  Cambiar del script hands_with_teleop.py en la función "teleop" el file_path con la ruta donde se tenga el archivo turtlebot3_teleop.launch del paquete de turtlebot3
+- Indicar en el script hands.py y el  hands_with_teleop.py  en la variable FILE_PATH_COSTMAP la ruta donde se tenga el archivo explore_costmap.launch del paquete frontier_exploration.
+- Indicar en el script hands_with_teleop.py en la variable FILE_PATH_TELEOP la ruta donde se tenga el archivo turtlebot3_teleop.launch del paquete de turtlebot3
 
 ## Ejecución proyecto
 
@@ -111,11 +111,11 @@ rosrun move hands_with_teleop.py
 ## Preparación de scripts
 
 Para poder usar el modo automático:
-- Cambiar del script hands.py y del  hands_with_teleop.py en la función "auto" el file_path con la ruta donde se tenga el archivo explore_costmap.launch del paquete frontier_exploration.
--  Cambiar del script hands_with_teleop.py en la función "teleop" el file_path con la ruta donde se tenga el archivo  keyboard_teleop.launch del paquete de turtlebot_teleop
+- Indicar en el script hands.py y el  hands_with_teleop.py  en la variable FILE_PATH_COSTMAP  la ruta donde se tenga el archivo explore_costmap.launch del paquete frontier_exploration.
+-Indicar en el script hands_with_teleop.py en la variable FILE_PATH_TELEOP  la ruta donde se tenga el archivo  keyboard_teleop.launch del paquete de turtlebot_teleop
 
 ## Ejecuión proyecto
-
+PA
 Se debe conectar el ordenador a la red local del laboratorio e inicializar las siguientes variables de entorno en cada uno de los terminales que se usen o bien tenerlas inicializadas en el bashrc:
 ```sh
 export ROS_MASTER_URI=http://<ip_turtlebot>:11311
