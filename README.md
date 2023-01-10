@@ -112,7 +112,7 @@ rosrun move hands_with_teleop.py
 
 Para poder usar el modo automático:
 - Cambiar del script hands.py y del  hands_with_teleop.py en la función "auto" el file_path con la ruta donde se tenga el archivo explore_costmap.launch del paquete frontier_exploration.
--  Cambiar del script hands_with_teleop.py en la función "teleop" el file_path con la ruta donde se tenga el archivo turtlebot_teleop.launch del paquete de turtlebot
+-  Cambiar del script hands_with_teleop.py en la función "teleop" el file_path con la ruta donde se tenga el archivo  keyboard_teleop.launch del paquete de turtlebot_teleop
 
 ## Ejecuión proyecto
 
