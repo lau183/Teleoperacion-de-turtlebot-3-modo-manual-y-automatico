@@ -17,7 +17,7 @@ pip install -r requirements.txt
 sudo apt install ros-noetic-arbotix
 ```
 
-## Preparación del entorno de Gazebo
+## Preparación del entorno de Gazebo para simulación del turtlebot 3
 
 1. Descomprimir la carpeta "modelos_arucos.tar.gz" en la ruta /.gazebo/models
 2. Descomprimir la carpeta "launch_mundos.tar.gz" en /turtlebot3_simulations/turtlebot3_gazebo/launch
@@ -29,7 +29,7 @@ Para poder usar el modo automático:
 - Cambiar del script hands.py y del  hands_with_teleop.py en la función "auto" el file_path con la ruta donde se tenga el archivo explore_costmap.launch del paquete frontier_exploration.
 -  Cambiar del script hands_with_teleop.py en la función "teleop" el file_path con la ruta donde se tenga el archivo turtlebot3_teleop.launch del paquete de turtlebot3
 
-# Guía de ejecución
+# Guía de ejecución en simulación
 
 En todos los terminales se debe incluir el modelo de  usado en la variable TURTLEBOT3_MODEL, de la siguiente forma:
 ```sh
@@ -105,7 +105,50 @@ rosrun move hands_with_teleop.py
  Aparecerá la interfaz de usuario y se seleccionará el modo automático o el automático teleoperado.
 
 
+# Guía de ejecución en  robot real turtlebot 2
+Se debe conectar el ordenador a la red local del laboratorio e inicializar las siguientes variables de entorno en cada uno de los terminales que se usen o bien tenerlas inicializadas en el bashrc:
+```sh
+export ROS_MASTER_URI=http://<ip_turtlebot>:11311
+export ROS_HOSTNAME=<ip_turtlebot>
+export ROS_IP=<ip_ordenador>
+```
 
+Para conectarse al robot real se hace a través de SSH:
+- Si  ssh tb2@<ip_turtlebot>se usa el Turtlebot 5, se emplea el siguiente comando:
+```sh
+ ssh tb2@<ip_turtlebot>
+```
+En caso de usar otro de los cuatro Turtlebots presentes en el laboratorio se usa el comando:
+```sh
+ssh turtlebot@<ip_turtlebot>
+```
+
+## Modo manual
+
+Abrimos los siguientes terminales desde dentro del robot (SSH):
+
+Terminal 1:  Arranque mínimo del robot.
+
+```sh
+roslaunch turtlebot_bringup minimal.launch
+```
+
+ Terminal 2: Controlador para el uso del brazo del robot. 
+ ```sh
+roslaunch phantomx_reactor_arm_controller arbotix_phantomx_reactor_arm_wrist.launch
+```
+
+Abrimos los siguientes terminales desde fuera del robot:
+
+ Terminal 3: Script para enviar el movimiento al robot en función del comando recibido.
+ ```sh
+rosrun manos move_manual.py
+```
+
+Terminal 4: Script para la selección y ejecución del modo.
+ ```sh
+ rosrun manos hands_with_teleop.py 
+```
 
 
 
