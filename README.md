@@ -46,17 +46,17 @@ Terminal 1: Simulación del turtlebot en gazebo con el entorno creado
  roslaunch turtlebot3_gazebo turtlebot3_aruco_world_2_wa.launch
 ```
 
-Terminal 2: Script para enviar el movimiento al robot en función del comando recibido
-
-```sh
-rosrun manos move_manual.py
-```
-Después, se añade la plantilla "RobotModel" en _rviz_ para visualizar el movimiento del robot.
-
-Terminal 3: Ejecutable para la simulacion y planificacion de movimiento del brazo _PhantomX Reactor Robot_.
+Terminal 2: Ejecutable para la simulacion y planificacion de movimiento del brazo _PhantomX Reactor Robot_.
 
 ```sh
 roslaunch phantomx_reactor_arm_moveit_config demo.launch
+```
+Después, se añade la plantilla "RobotModel" en _rviz_ para visualizar el movimiento del robot.
+
+Terminal 3: Script para enviar el movimiento al robot en función del comando recibido
+
+```sh
+rosrun manos move_manual.py
 ```
 
 Terminal 4: Script para la selección y ejecución del modo
