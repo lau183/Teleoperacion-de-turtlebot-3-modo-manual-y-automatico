@@ -62,7 +62,7 @@ rosrun manos move_manual.py
 Terminal 4: Script para la selección y ejecución del modo
 
 ```sh
-rosrun move hands.py
+rosrun manos hands.py
 ```
 
 Aparecerá la interfaz gráfica y se selecciona el modo manual. Una vez seleccionado este modo, aparecerá la cámara y para cada uno de los gestos indicados, se tendrá que mostrar el gesto delante de la cámara y guardar con la tecla "t".
@@ -97,12 +97,12 @@ roslaunch aruco_detector_ocv detector.launch
 Terminal 5: Script para la selección y ejecución del modo.
 
 ```sh
-rosrun move hands.py 
+rosrun manos hands.py 
 ```
 En caso, de que se quiera usar el modo automático teleoperado, para que en la interfaz aparezeca dicha opción se debe usar el script hands_with_teleop.py en lugar del hands.py.
 
 ```sh
-rosrun move hands_with_teleop.py 
+rosrun manos hands_with_teleop.py 
 ```
  Aparecerá la interfaz de usuario y se seleccionará el modo automático o el automático teleoperado.
 
