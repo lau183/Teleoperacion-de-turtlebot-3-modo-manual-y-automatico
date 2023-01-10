@@ -31,13 +31,14 @@ Para poder usar el modo automático:
 - Cambiar del script hands.py y del  hands_with_teleop.py en la función "auto" el file_path con la ruta donde se tenga el archivo explore_costmap.launch del paquete frontier_exploration.
 -  Cambiar del script hands_with_teleop.py en la función "teleop" el file_path con la ruta donde se tenga el archivo turtlebot3_teleop.launch del paquete de turtlebot3
 
+## Ejecución proyecto
 
 En todos los terminales se debe incluir el modelo de  usado en la variable TURTLEBOT3_MODEL, de la siguiente forma:
 ```sh
 export TURTLEBOT3_MODEL=waffle
 ```
 
-## Modo manual
+### Modo manual
 
 Terminal 1: Simulación del turtlebot en gazebo con el entorno creado
 
@@ -68,7 +69,7 @@ Aparecerá la interfaz gráfica y se selecciona el modo manual. Una vez seleccio
 
 Ya con todos los gestos introducidos, se puede utilizar sin problemas, y comenzar a dirigir al robot.
 
-## Modo automático y automático teleoperado
+### Modo automático y automático teleoperado
 
 Terminal 1:  Simulación del turtlebot en gazebo con el entorno creado.
 
@@ -113,6 +114,7 @@ Para poder usar el modo automático:
 - Cambiar del script hands.py y del  hands_with_teleop.py en la función "auto" el file_path con la ruta donde se tenga el archivo explore_costmap.launch del paquete frontier_exploration.
 -  Cambiar del script hands_with_teleop.py en la función "teleop" el file_path con la ruta donde se tenga el archivo turtlebot_teleop.launch del paquete de turtlebot
 
+## Ejecuión proyecto
 
 Se debe conectar el ordenador a la red local del laboratorio e inicializar las siguientes variables de entorno en cada uno de los terminales que se usen o bien tenerlas inicializadas en el bashrc:
 ```sh
@@ -131,7 +133,7 @@ En caso de usar otro de los cuatro Turtlebots presentes en el laboratorio se usa
 ssh turtlebot@<ip_turtlebot>
 ```
 
-## Modo manual
+### Modo manual
 
 Abrimos los siguientes terminales desde dentro del robot (SSH):
 
@@ -158,7 +160,7 @@ Terminal 2: Script para la selección y ejecución del modo.
  rosrun manos hands_with_teleop.py 
 ```
 
-## Modo automático y automático teleoperado
+### Modo automático y automático teleoperado
 
 Abrimos los siguientes terminales desde dentro del robot (SSH):
 
