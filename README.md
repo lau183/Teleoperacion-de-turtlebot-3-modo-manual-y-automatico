@@ -209,8 +209,8 @@ Terminal 2: Script para la selección y ejecución del modo.
 
 
 ## Referencias usadas
--[Código modo manual]
--[Detección de Arucos] 
+- [Código modo manual]
+- [Detección de Arucos] 
 
 
 
