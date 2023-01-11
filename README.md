@@ -6,7 +6,7 @@ Repositorio de la práctica 3 de la asignatura de robots móviles del grado de I
 ## Requisitos
 - ROS noetic
 - [Paquete turtlebot3] para probar proyecto en simulación
-- [Paquete frontier exploration]
+- [Paquete frontier exploration] paquete desarrollado por Ashwin A Nayar
 - [Paquete Navigation stack]
 - [Paquete turtlebot 2] para probar proyecto en robot real
 
@@ -16,6 +16,7 @@ conda create -n <nombre_entorno> python=3.8
 conda activate <nombre_entorno>
 pip install -r requirements.txt
 sudo apt install ros-noetic-arbotix
+sudo apt install ros-noetic-moveit*
 ```
 # Guía de ejecución en simulación con turtlebot 3
 
@@ -207,6 +208,9 @@ Terminal 2: Script para la selección y ejecución del modo.
 ```
 
 
+## Referencias usadas
+[Código modo manual]
+[Detección de Arucos] 
 
 
 
@@ -216,10 +220,8 @@ Terminal 2: Script para la selección y ejecución del modo.
 
 
 
-
-
-
-
+[Detección de Arucos]: https://github.com/CesMak/aruco_detector_ocv
+[Código modo manual]: https://toptechboy.com/improved-gesture-recognition-in-python-and-mediapipe/
 [Paquete turtlebot 2]: https://github.com/turtlebot/turtlebot.git
 [Paquete turtlebot3]: https://github.com/ROBOTIS-GIT/turtlebot3.git
 [Paquete frontier exploration]: https://github.com/nocoinman/frontier_exploration.git
