@@ -120,8 +120,7 @@ PA
 Se debe conectar el ordenador a la red local del laboratorio e inicializar las siguientes variables de entorno en cada uno de los terminales que se usen o bien tenerlas inicializadas en el bashrc:
 ```sh
 export ROS_MASTER_URI=http://<ip_turtlebot>:11311
-export ROS_HOSTNAME=<ip_turtlebot>
-export ROS_IP=<ip_ordenador>
+export ROS_HOSTNAME=<ip_ordenador>
 ```
 
 Para conectarse al robot real se hace a través de SSH:
@@ -160,6 +159,10 @@ Terminal 2: Script para la selección y ejecución del modo.
  ```sh
  rosrun manos hands_with_teleop.py 
 ```
+Aparecerá la interfaz gráfica y se selecciona el modo manual. Una vez seleccionado este modo, aparecerá la cámara y para cada uno de los gestos indicados, se tendrá que mostrar el gesto delante de la cámara y guardar con la tecla "t".
+
+Ya con todos los gestos introducidos, se puede utilizar sin problemas, y comenzar a dirigir al robot.
+
 
 ### Modo automático y automático teleoperado
 
@@ -206,7 +209,7 @@ Terminal 2: Script para la selección y ejecución del modo.
  ```sh
  rosrun manos hands_with_teleop.py
 ```
-
+ Aparecerá la interfaz de usuario y se seleccionará el modo automático o el automático teleoperado.
 
 ## Referencias usadas
 - [Código detección gestos]
