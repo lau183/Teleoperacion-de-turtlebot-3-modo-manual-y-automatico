@@ -209,7 +209,7 @@ Terminal 2: Script para la selección y ejecución del modo.
 
 
 ## Referencias usadas
-- [Código modo manual]
+- [Código detección gestos]
 - [Detección de Arucos] 
 
 
@@ -221,7 +221,7 @@ Terminal 2: Script para la selección y ejecución del modo.
 
 
 [Detección de Arucos]: https://github.com/CesMak/aruco_detector_ocv
-[Código modo manual]: https://toptechboy.com/improved-gesture-recognition-in-python-and-mediapipe/
+[Código detección gestos]: https://toptechboy.com/improved-gesture-recognition-in-python-and-mediapipe/
 [Paquete turtlebot 2]: https://github.com/turtlebot/turtlebot.git
 [Paquete turtlebot3]: https://github.com/ROBOTIS-GIT/turtlebot3.git
 [Paquete frontier exploration]: https://github.com/nocoinman/frontier_exploration.git
