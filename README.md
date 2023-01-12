@@ -193,7 +193,7 @@ Terminal 1: Opertura del entorno de rviz para visualizar el mapeo, la posición 
 rosrun rviz rviz
 ```
 
- Una vez se haya abierto, se cambia el fixed frame a /odom y es necesario incluir la plantilla:
+ Una vez se haya abierto, se cambia el fixed frame a /odom y es necesario incluir las plantillas:
  - LaserScan con topic /scan
  - Axes con topic /base_link
  - Map con topic /map
